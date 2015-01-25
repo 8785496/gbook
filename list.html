@@ -1,0 +1,46 @@
+<form name="myForm">
+    <div class="form-group">
+        <input type="text" class="form-control" name="author" ng-model="note.author" required style="width:100%" placeholder="Ваше имя">
+    </div>
+    <textarea name="content" class="form-control" ng-model="note.content" required  style="width:100%" rows="4" placeholder="Текст сообщения..."></textarea>
+    <br>
+    <button ng-click="create()" ng-disabled="myForm.$invalid" class="btn btn-primary">Отправить</button>
+</form>
+
+<nav>
+    <ul class="pager">
+        <li class="previous" ng-class="isPrev">
+            <a ng-href="#/page/{{pagePrev}}"><span aria-hidden="true">&larr;</span> Назад</a>
+        </li>
+        <li>Страница {{currentPage}} из {{pageCount}}</li>
+        <li class="next" ng-class="isNext">
+            <a ng-href="#/page/{{pageNext}}">Вперед <span aria-hidden="true">&rarr;</span></a>
+        </li>
+    </ul>
+</nav>
+
+<table class="table">
+    <tr ng-repeat="project in projects">
+        <td><strong>{{project.author}}</strong></td>
+        <td>
+            <p>
+                <span style="color:grey">{{project.time_create}}</span>
+                <a class="pull-right" ng-href="#/edit/{{project.id}}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+            </p>
+            <p>{{project.content}}</p>
+            <small style="color:grey" ng-if="project.updated">Обновлено: {{project.time_update}}</small>
+        </td>
+    </tr> 
+</table> 
+
+<nav>
+    <ul class="pager">
+        <li class="previous" ng-class="isPrev">
+            <a ng-href="#/page/{{pagePrev}}"><span aria-hidden="true">&larr;</span> Назад</a>
+        </li>
+        <li>Страница {{currentPage}} из {{pageCount}}</li>
+        <li class="next" ng-class="isNext" ng-if="isUpdate">
+            <a ng-href="#/page/{{pageNext}}">Вперед <span aria-hidden="true">&rarr;</span></a>
+        </li>
+    </ul>
+</nav>

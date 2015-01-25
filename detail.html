@@ -1,0 +1,12 @@
+<form name="myForm">
+    <div class="form-group">
+        <label>Имя</label>
+        <input type="text" class="form-control" name="author" ng-model="project.author" required style="width:100%">
+    </div>
+    <label>Сообщение</label>
+    <textarea name="content" class="form-control" ng-model="project.content" required style="width:100%" rows="4"></textarea>
+    <br>
+    <a href="#/" class="btn btn-default">Отмена</a>
+    <button ng-click="update()" ng-disabled="isClean() || myForm.$invalid" class="btn btn-primary">Сохранить</button>
+    <button ng-click="delete()" ng-disabled="myForm.$invalid" class="btn btn-danger">Удалить</button>
+</form>
