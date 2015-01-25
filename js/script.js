@@ -78,17 +78,3 @@ angular.module('project', ['ngRoute', 'restyii2'])
                         });
                     };
                 });
-
-//Connection:Keep-Alive
-//Content-Length:840
-//Content-Type:application/json; charset=UTF-8
-//Date:Mon, 05 Jan 2015 13:48:21 GMT
-//Keep-Alive:timeout=5, max=100
-//Link:<http://localhost/basic/web/index.php/posts?page=1>; rel=self
-//Server:Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11
-//X-Pagination-Current-Page:1
-//X-Pagination-Page-Count:1
-//X-Pagination-Per-Page:20
-//X-Pagination-Total-Count:14
-//X-Powered-By:PHP/5.5.11
-
